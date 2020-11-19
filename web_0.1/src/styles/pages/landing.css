@@ -1,0 +1,48 @@
+#page-landing {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(329.54deg, #5E5E81 0%, #292947);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-landing .content-wrapper {
+
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+
+
+    height: 40%;
+    max-width: 680px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-wrapper .enter-app {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+
+     width: 80px;
+     height: 30px;
+     background: #29B6D1;
+     border-radius: 30px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+    transition: backgroud-color 0.2s;
+
+}
+
+.content-wrapper .enter-app:hover{
+    background: #292947;
+
+}
