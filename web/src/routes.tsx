@@ -1,26 +1,22 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Landing from './pages/Landing';
-import LandingLogin from './pages/LandingLogin'
-import Mapas from './pages/Mapas';
-import Mapa from './pages/Mapa';
-import CreateMapa from './pages/CreateMapa';
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import Landing from './pages/Landing'
+import OrphanagesMap from './pages/OrphanagesMap'
+import Orphanage from './pages/Orphanage'
+import CreateOrphanage from './pages/CreateOrphanage'
 
-
-function Routes() {
-    return(
-        <BrowserRouter>
-            <Switch>
-                <Route path= "/" exact component= {Landing} />
-                <Route path= "/login" exact component= {LandingLogin} />
-                <Route path= "/mapas" component= {Mapas} />
-              
-                <Route path= "/mapas/create" component= {CreateMapa} />
-                <Route path= "/mapas/:id" component= {Mapa} />
-            </Switch>
-        </BrowserRouter>
-    );
+const Routes: React.FC = () => {
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route path="/" component={Landing} exact />
+				<Route path="/app" component={OrphanagesMap} />
+				<Route path="/orphanages/create" component={CreateOrphanage} />
+				<Route path="/orphanages/:id" component={Orphanage} />
+			</Switch>
+		</BrowserRouter>
+	)
 }
 
-export default Routes;
+export default Routes
